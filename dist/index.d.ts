@@ -23,7 +23,7 @@ export declare class Form<T extends Record<string, unknown>> {
    * @param name The field name
    * @param additionalProps Additional props of the element to merge with the form props
    * @returns An attribute object which should be spread on the element */
-  public register<K extends KeyOf<T>, P extends Partial<HTMLInputElement>>(
+  public register<K extends KeyOf<T>, P extends import("vanjs-core").PropsWithKnownKeys<HTMLInputElement>>(
     name: K,
     additionalProps?: P
   ): FieldProps<T, typeof name> & typeof additionalProps;
